@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Cart - Homemade Pickles{% endblock %}
+{% block content %}
+<h2>Your Cart</h2>
+
+{% if cart %}
+    <ul>
+        {% for item in cart %}
+            <li>{{ item.product }} — ₹{{ item.price }}</li>
+        {% endfor %}
+    </ul>
+    <p><strong>Total:</strong> ₹{{ total }}</p>
+    <form method="POST" action="{{ url_for('checkout') }}">
+        <button type="submit">Checkout</button>
+    </form>
+{% else %}
+    <p>Your cart is empty.</p>
+{% endif %}
+{% endblock %}

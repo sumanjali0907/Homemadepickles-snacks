@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block title %}Products - Homemade Pickles{% endblock %}
+{% block content %}
+<h2>Our Pickles</h2>
+
+<div class="products">
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/snack1.jpeg') }}">
+        <h3>Spicy Mango Pickle</h3>
+        <p>Price: ₹150</p>
+        <form method="POST" action="/add_to_cart">
+            <input type="hidden" name="product" value="Spicy Mango Pickle">
+            <input type="hidden" name="price" value="150">
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/snack2.jpeg') }}">
+        <h3>Lemon Pickle</h3>
+        <p>Price: ₹120</p>
+        <form method="POST" action="/add_to_cart">
+            <input type="hidden" name="product" value="Lemon Pickle">
+            <input type="hidden" name="price" value="120">
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/tomato_pickle.jpeg') }}">
+        <h3>Tomato Pickle</h3>
+        <p>Price: ₹130</p>
+        <form method="POST" action="/add_to_cart">
+            <input type="hidden" name="product" value="Tomato Pickle">
+            <input type="hidden" name="price" value="130">
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/chicken_pickle.jpeg') }}">
+        <h3>Chicken Pickle</h3>
+        <p>Price: ₹250</p>
+        <form method="POST" action="/add_to_cart">
+            <input type="hidden" name="product" value="Chicken Pickle">
+            <input type="hidden" name="price" value="250">
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+</div>
+
+<hr>
+
+<h2>Our Snacks</h2>
+
+<div class="products">
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/chakkaralu.jpeg') }}">
+        <h3>Chakkaralu</h3>
+        <p>Price: ₹80</p>
+        <form method="POST" action="/add_to_cart">
+            <input type="hidden" name="product" value="Chakkaralu">
+            <input type="hidden" name="price" value="80">
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/chekkalu.jpeg') }}">
+        <h3>Chekkalu</h3>
+        <p>Price: ₹90</p>
+        <form method="POST" action="/add_to_cart">
+            <input type="hidden" name="product" value="Chekkalu">
+            <input type="hidden" name="price" value="90">
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/murukulu.jpg') }}">
+        <h3>Murukulu</h3>
+        <p>Price: ₹100</p>
+        <form method="POST" action="/add_to_cart">
+            <input type="hidden" name="product" value="Murukulu">
+            <input type="hidden" name="price" value="100">
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/sunnunda.jpeg') }}">
+        <h3>Sunnunda</h3>
+        <p>Price: ₹110</p>
+        <form method="POST" action="/add_to_cart">
+            <input type="hidden" name="product" value="Sunnunda">
+            <input type="hidden" name="price" value="110">
+            <button type="submit">Add to Cart</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
